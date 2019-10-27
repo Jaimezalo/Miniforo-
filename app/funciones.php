@@ -17,7 +17,7 @@
     
     //Devuelve el numero de caracteres que contiene una cadena
     function LongitudCadena() {
-        $cadena = trim($_REQUEST['comentario']);
+        $cadena = strip_tags (trim($_REQUEST['comentario']));
         return strlen($cadena);
     }
     
