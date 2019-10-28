@@ -46,9 +46,9 @@
     //Fución que devuelve el caracter más repetido de una cadena
     function LetraRepetida() {
         
-        $cadena = $_REQUEST['comentario'];
+        $cadena = str_replace(' ','',$_REQUEST['comentario']);
         $letra = '';
-        $maxrepeticiones = -1;
+        $maxrepeticiones = 0;
         
         for($i=0; $i<strlen($cadena); $i++){     
             $repeticiones = substr_count($cadena , $cadena[$i]);
